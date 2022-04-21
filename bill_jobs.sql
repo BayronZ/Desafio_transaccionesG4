@@ -54,7 +54,8 @@ bill_jobs=# SELECT * FROM producto;
 (20 rows)
 
 -- Se realizó la transaccion
-BEGIN; INSERT INTO compra (cliente_id,fecha) 
+BEGIN; 
+INSERT INTO compra (cliente_id,fecha) 
 VALUES(1,CURRENT_DATE); 
 INSERT INTO detalle_compra(producto_id, compra_id, cantidad) 
 VALUES(9,32,5); 

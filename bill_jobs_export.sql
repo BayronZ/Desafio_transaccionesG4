@@ -246,8 +246,8 @@ COPY public.compra (id, cliente_id, fecha) FROM stdin;
 30	5	2020-04-09
 31	1	2020-03-29
 32	2	2020-03-29
-41	1	2022-04-20
-43	2	2022-04-20
+39	1	2022-04-20
+42	2	2022-04-20
 \.
 
 
@@ -298,8 +298,7 @@ COPY public.detalle_compra (id, producto_id, compra_id, cantidad) FROM stdin;
 40	1	32	3
 41	2	32	3
 42	8	32	3
-63	9	32	5
-65	1	41	3
+61	9	39	5
 \.
 
 
@@ -324,10 +323,10 @@ COPY public.producto (id, descripcion, stock, precio) FROM stdin;
 18	producto18	2	9383
 19	producto19	6	1140
 20	producto20	4	102
+1	producto1	6	9107
 2	producto2	5	1760
 8	producto8	0	8923
 9	producto9	3	4219
-1	producto1	3	9107
 \.
 
 
@@ -342,14 +341,14 @@ SELECT pg_catalog.setval('public.cliente_id_seq', 12, true);
 -- Name: compra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.compra_id_seq', 53, true);
+SELECT pg_catalog.setval('public.compra_id_seq', 46, true);
 
 
 --
 -- Name: detalle_compra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.detalle_compra_id_seq', 75, true);
+SELECT pg_catalog.setval('public.detalle_compra_id_seq', 67, true);
 
 
 --
